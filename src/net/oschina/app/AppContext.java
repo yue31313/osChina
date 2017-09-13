@@ -55,7 +55,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Handler;
 import android.os.Message;
-import android.webkit.CacheManager;
+//import android.webkit.CacheManager;
 
 /**
  * 全局应用程序类：用于保存和调用全局应用配置及访问网络数据
@@ -1461,7 +1461,8 @@ public class AppContext extends Application {
 	public void clearAppCache()
 	{
 		//清除webview缓存
-		File file = CacheManager.getCacheFileBaseDir();  
+//		File file = CacheManager.getCacheFileBaseDir();  
+		File file = null;
 		if (file != null && file.exists() && file.isDirectory()) {  
 		    for (File item : file.listFiles()) {  
 		    	item.delete();  
